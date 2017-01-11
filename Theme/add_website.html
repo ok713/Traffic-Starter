@@ -9,7 +9,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Add new website &middot; view.ly</title>
+    <title>Websites &middot; view.ly</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +17,7 @@
     <meta name="author" content="">
 
     <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN THEME GLOBAL STYLES -->
-    <!-- END THEME GLOBAL STYLES -->
+    <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- BEGIN THEME LAYOUT STYLES -->
     <link href="../assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
@@ -42,10 +40,12 @@
     <link rel="stylesheet" href="../static/websites/css/websites.css">
 
 
+    <link rel="stylesheet" type="text/css" href="../static/websites/css/websites.css">
 
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="http://simpleicon.com/wp-content/uploads/star.png" />
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -184,128 +184,31 @@
                 <!-- END HEADER -->
             </div>
         </div>
-        <div class="page-head">
-            <div class="container">
-                <!-- BEGIN PAGE TITLE -->
-                <div class="page-title">
-
-                </div>
-                <!-- END PAGE TITLE -->
-                <!-- BEGIN PAGE TOOLBAR -->
-                <div class="page-toolbar">
-                </div>
-                <!-- END PAGE TOOLBAR -->
-            </div>
-        </div>
 
         <div class="content">
 
 
             <div class="container">
-                <div class="layout layout-main-right layout-stack-sm">
 
-                    <div class="col-md-3 col-sm-4 layout-sidebar">
-                        <div class="nav-layout-sidebar-skip">
-                            <strong>Tab Navigation</strong> / <a href="#settings-content">Skip to Content</a>
+
+
+                <div class="row">
+
+
+
+                    <br class="md-30" />
+
+                    <div class="col-md-12">
+                        <div class="well no-websites text-center">
+                            <p>Currently you have no websites.</p>
+                            <p><a href="add.html" class="btn btn-primary">Add new website</a></p>
                         </div>
-
-
-
-                        <ul class="nav nav-layout-sidebar nav-stacked">
-
-
-
-                            <li class="active">
-                                <a href="/dashboard/websites/add/">
-                                    <i class="fa fa-globe"></i> &nbsp;&nbsp;Your website
-                                </a>
-                            </li>
-
-
-
-                        </ul>
-
-
-
                     </div>
-                    <!-- /.col -->
-
-                    <div class="col-md-9 col-sm-8 layout-main">
-                        <div id="settings-content" class="tab-content stacked-content">
-                            <div class="tab-pane active" id="profile-tab">
-
-                                <div class="heading-block">
-                                    <h3>Add Your Website</h3>
-                                </div>
-
-                                <form action="../theme/add/" method="post" id="form-website" class="form-horizontal" novalidate>
-                                    <div class="form-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Retention:</label>
-                                            <div class="col-md-4">
-                                                <select class="bs-select form-control">
-                                                                            <option>1 Minute</option>
-                                                                            <option>2 Minute </option>
-                                                                            <option value="3" disabled="disabled">3 Minute (No Privileges)</option>
-                                                                            <option value="4" disabled="disabled">4 Minute (No Privileges)</option>
-                                                                            <option value="5" disabled="disabled">5 Minute (No Privileges)</option></select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-
-                                            <label class="control-label col-md-3">Referrer</label>
-                                            <div class="col-md-4">
-                                                <select id="referrersel" class="bs-select form-control">
-                                                                            <option>Facebook</option>
-                                                                            <option>Pinterest</option>
-                                                                            <option>Twitter</option>
-                                                                            <option>Reddit</option>
-                                                                            <option>YouTube</option>
-                                                                            <option>Tumblr</option>
-                                                                            <option>Linkedin</option>
-                                                                            <option>CUSTOM URL</option>
-                                                                            <option>GOOGLE</option>
-                                                                            <option>BING</option>
-                                                                            </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="default" class="control-label col-md-3">Custom Referrer URL:						</label>
-                                            <div class="col-md-4">
-                                                <input class="form-control custromref" id="id_url" maxlength="200" name="url" type="url" placeholder="www.your-referrer.com" disabled/>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="default" class="control-label col-md-3">Search Engine Keyword:						</label>
-                                            <div class="col-md-4">
-                                                <input id="search_keyword" type="text" class="form-control" placeholder="your+keyword+here" disabled>
-                                            </div>
-                                        </div>
-                                    </div>
 
 
 
-
-                                    <div class="form-group">
-                                        <div class="col-md-5 col-md-offset-2">
-                                            <input type="submit" value="Apply Changes" class="btn btn-primary" />
-                                            <a href="add_website.html" class="btn btn-default">Back</a>
-                                        </div>
-                                    </div>
-
-                                </form>
-
-                            </div>
-                            <!-- /.tab-pane -->
-                        </div>
-                        <!-- /.tab-content -->
-                    </div>
-                    <!-- /.col -->
                 </div>
-                <!-- /.row -->
             </div>
-            <!-- /.container -->
 
 
         </div>
@@ -366,77 +269,7 @@
     <script src="../static/websites/js/websites.js"></script>
 
 
-    <script>
-        $(function() {
-            $('#slotchk1').change(function() {
-                if ($(this).is(':checked')) {
-                    $(this).addClass('checked');
-                    $('#slot1').removeAttr("disabled");
-                } else {
-                    $(this).removeClass('checked');
-                    $('#slot1').attr("disabled", "true");
-                }
-            });
 
-            $('#slotchk2').change(function() {
-                if ($(this).is(':checked')) {
-                    $(this).addClass('checked');
-                    $('#slot2').removeAttr("disabled");
-                } else {
-                    $(this).removeClass('checked');
-                    $('#slot2').attr("disabled", "true");
-                }
-            });
-
-            $('#referrersel').change(function() {
-                if ($(this).val() == "CUSTOM URL") {
-                    $('.custromref').removeAttr("disabled");
-                } else if ($(this).val() != "CUSTOM URL") {
-                    $('.custromref').attr("disabled", "true");
-                }
-
-                if ($(this).val() == "GOOGLE" || $(this).val() == "BING") {
-                    $('#search_keyword').removeAttr("disabled");
-                } else {
-                    $('#search_keyword').attr("disabled", "true");
-                }
-
-
-
-            });
-        })
-    </script>
-    <script>
-        var availableMinutes = parseInt(9000) || 0;
-    </script>
-
-
-    <script>
-        function logout() {
-            var form = document.querySelector('#form-logout');
-            form.submit();
-        }
-
-        function confirmModal(title, msg, callback) {
-            var dialog = $('#confirmModal');
-            dialog
-                .find('.modal-title').text(title).end()
-                .find('.modal-body').html(msg).end()
-                .find('.btn-ok').on('click', function() {
-                    $(this).off('click');
-                    dialog.modal('hide');
-                    if (typeof(callback) === 'function') {
-                        callback();
-                    }
-                }).end()
-                .modal('show');
-        }
-
-        // Auto close alert messages
-        $(".alert:not(.admin-warning)").delay(5000).slideUp(200, function() {
-            $(this).alert('close');
-        });
-    </script>
 
 </body>
 

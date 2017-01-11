@@ -1,0 +1,73 @@
+.navbar > .container .navbar-brand {
+  margin-left: 0;
+}
+.navbar .navbar-brand-img {
+  width: 84px;
+  height: 46px;
+  text-indent: -1000px;
+  background-image: url('../img/logo.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.navbar .navbar-brand:hover {
+  background-image: url('../img/logo2.png');
+}
+
+.navbar .navbar-nav > .navbar-notification .dropdown-menu:before {
+  right: 15px;
+  left: auto;
+}
+
+.navbar .navbar-nav > .navbar-notification .notification:last-child {
+  border-bottom: none;
+}
+
+.navbar .navbar-nav > li > span.divider {
+  position: relative;
+  display: block;
+  color: #87a3bc;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 17px 12px;
+}
+
+.navbar-notification .badge {
+  display: none;
+}
+.navbar-notification.has-unread .badge {
+  display: inline;
+}
+.navbar .navbar-nav > .navbar-notification.empty .notification-list {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.layout-main-left .layout-sidebar {
+  border-left: none;
+  box-shadow: none;
+}
+
+.tabs-actions {
+  padding-left: 15px;
+}
+.tabs-actions .website-info {
+  margin-bottom: 25px;
+}
+.tabs-actions .btn {
+  margin-bottom: 15px;
+}
+
+.alert.alert-warning {
+  text-shadow: none;
+  color: #000;
+}
+
+.ban-icon {
+  font-size: 70px;
+}
+
+.maintenance {
+  height: auto;
+}
