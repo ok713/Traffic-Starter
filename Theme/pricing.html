@@ -13,6 +13,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta ignore="" name="description" content="Ahrefs offers subscription packages for any budget. New to SEO? - take our $99 “Lite” package. Experienced marketer? - grab $179 “Standard”. Try us free for 14 days!">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -41,6 +42,21 @@
     <link rel="stylesheet" href="../static/dashboard/css/mvpready-admin.css">
     <link rel="stylesheet" href="../static/dashboard/css/style.css">
     <link rel="stylesheet" href="../static/websites/css/websites.css">
+
+
+    <link href="./Plans &amp; Pricing - Ahrefs_files/css" rel="stylesheet" type="text/css">
+    <link href="./Plans &amp; Pricing - Ahrefs_files/home.css" media="screen" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Plans &amp; Pricing - Ahrefs_files/u-pricing.css">
+    <link href="./Plans &amp; Pricing - Ahrefs_files/flag-icon.min.css" media="screen" type="text/css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./Plans &amp; Pricing - Ahrefs_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./Plans &amp; Pricing - Ahrefs_files/tipped.css">
+    <script src="./Plans &amp; Pricing - Ahrefs_files/jquery.min.js.download"></script>
+
+    <script src="./Plans &amp; Pricing - Ahrefs_files/modules-ff7d3b106250c90da6a950a49a62f342.js.download"></script>
+
+
 
 
 
@@ -185,26 +201,21 @@
                 <!-- END HEADER -->
             </div>
         </div>
-        <div class="page-head">
-            <div class="container">
-                <!-- BEGIN PAGE TITLE -->
-                <div class="page-title">
-
-                </div>
-                <!-- END PAGE TITLE -->
-                <!-- BEGIN PAGE TOOLBAR -->
-                <div class="page-toolbar">
-                </div>
-                <!-- END PAGE TOOLBAR -->
-            </div>
+        <div>
+            <ul class="page-breadcrumb breadcrumb" style=" background: white;">
+                <li>
+                    <a href="index.html">Home</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span>Pricing</span>
+                </li>
+            </ul>
         </div>
 
-        <div class="content">
+
+        <div class="content" style=" background: #1e5694; margin: 0;">
             <div class="container container-table">
-                <div class="container-header">
-                    <h2 class="title" id="pnpHeader">Plans & pricing</h2>
-                    <h3 class="text-xs-center pp-sub-title">Register your Ahrefs account with 14-day free trial</h3>
-                </div>
                 <div class="text-xs-center">
                     <ul class="pricing__switcher__tabs">
                         <li class="pricing__switcher__tab monthly active"><span class="type">Monthly billing</span></li>
@@ -1192,24 +1203,7 @@
     </footer>
 
 
-    <div id="confirmModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h3 class="modal-title">Title</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Enter some text here...</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary btn-ok">Yes, I'm sure</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.modal -->
+
 
     <!-- Core JS -->
     <script src="../static/bower_components/jquery/dist/jquery.js"></script>
@@ -1234,33 +1228,240 @@
         var availableMinutes = parseInt(9000) || 0;
     </script>
 
-
     <script>
-        function logout() {
-            var form = document.querySelector('#form-logout');
-            form.submit();
-        }
-
-        function confirmModal(title, msg, callback) {
-            var dialog = $('#confirmModal');
-            dialog
-                .find('.modal-title').text(title).end()
-                .find('.modal-body').html(msg).end()
-                .find('.btn-ok').on('click', function() {
-                    $(this).off('click');
-                    dialog.modal('hide');
-                    if (typeof(callback) === 'function') {
-                        callback();
+        $('#formLogin').on('submit', function(e) {
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false); // IE edge not working with preventDefault...
+            if ($('#formLogin')[0].checkValidity()) {
+                params = $('#formLogin').serialize();
+                $.ajax({
+                    url: '/user/login',
+                    data: params,
+                    type: "POST",
+                    success: function(data) {
+                        if (typeof(data.success) == 'undefined') {
+                            window.location = '/';
+                        } else {
+                            if (data.success) {
+                                window.location = '/dashboard/metrics';
+                            } else {
+                                $('.errormsg').show();
+                            }
+                        }
+                        return false;
                     }
-                }).end()
-                .modal('show');
-        }
-
-        // Auto close alert messages
-        $(".alert:not(.admin-warning)").delay(5000).slideUp(200, function() {
-            $(this).alert('close');
+                });
+            }
+            return false;
         });
     </script>
+
+    <script src="./Plans &amp; Pricing - Ahrefs_files/tether.min.js.download"></script>
+
+    <script src="./Plans &amp; Pricing - Ahrefs_files/bootstrap.min.js.download"></script>
+
+    <script>
+        var choosenPlan = 'standard';
+
+        function showTrialWindow(email) {
+            if (choosenPlan == 'lite') {
+                FSlink = 'https://sites.fastspring.com/ahrefs/instant/try-ahrefs-lite-monthly-subscription-14-days-trial?tags=trial';
+            } else {
+                FSlink = 'https://sites.fastspring.com/ahrefs/instant/try-ahrefs-standard-subscription-14day-trial?tags=trial';
+            }
+
+
+            createContact = false;
+            if (typeof(email) != 'undefined' && email != '' && email != 'FS') {
+                FSlink += '&contact_fname=%20&contact_lname=%20&contact_email=' + encodeURIComponent(email);
+            } else if ($('#emailContact').length && $('#emailContact').val() != '') {
+                createContact = true;
+                //track
+                analytics.track('Entered Email and Clicked Continue');
+            }
+
+
+            if (typeof(email) == 'undefined') {
+                FSlink = '/pricing-plans?error=guest';
+            }
+
+            //segment, get mixpanel anonymous ID
+            if (typeof(mixpanel) != 'undefined' && typeof(mixpanel.get_distinct_id) === 'function') {
+                anonID = mixpanel.get_distinct_id();
+
+                if (typeof(anonID) != 'undefined' && anonID != '') {
+                    anonID = 'mixpanel_' + anonID;
+                    FSlink = FSlink + '&referrer=' + anonID;
+                }
+            }
+
+            if (createContact) {
+                email = $('#emailContact').val();
+                FSlink += '&contact_fname=%20&contact_lname=%20&contact_email=' + encodeURIComponent(email);
+                $.ajax({
+                    url: '/ajax/create-contact',
+                    type: 'POST',
+                    data: {
+                        _token: 'cx6Zyil3ms0B7Ra2rhqrEMDXOtD7gd4JisxsIO1V',
+                        email: email
+                    },
+                    success: function(result) {
+                        window.location = FSlink;
+                    }
+                });
+            } else {
+                window.location = FSlink;
+            }
+
+            return false;
+        }
+    </script>
+
+    <script type="text/javascript">
+        function showTryAhrefsModal() {
+            $("#already_exist_message").hide();
+            tryAhrefsModal.fadeIn(100);
+            $('#emailContact').focus();
+        }
+
+        function hideTryAhrefsModal() {
+            tryAhrefsModal.fadeOut(100);
+        }
+
+        var tryAhrefsModal, tryAhrefsModalClose;
+
+        $(document).ready(function() {
+            tryAhrefsModal = $('#tryAhrefsFreeModal');
+            tryAhrefsModalClose = $('#closeTryAhrefsFree');
+            tryAhrefsModalClose.on('click', hideTryAhrefsModal);
+
+            $('#formContact').on('submit', function(e) {
+                e.preventDefault ? e.preventDefault() : (e.returnValue = false); // IE edge not working with preventDefault...
+                if ($('#formContact')[0].checkValidity()) {
+                    $.post('/user/exist-contact', {
+                        email: $("#emailContact").val(),
+                        '_token': 'cx6Zyil3ms0B7Ra2rhqrEMDXOtD7gd4JisxsIO1V'
+                    }, function(Response) {
+                        if (typeof(Response.already_exist) != 'undefined' && Response.already_exist != null && Response.already_exist) {
+                            $("#already_exist_message").show();
+                            $('#emailContact').focus();
+                        } else {
+                            hideTryAhrefsModal();
+                            showTrialWindow('FS');
+                        }
+                    }, "json");
+                } else {
+                    $('#emailContact').focus();
+                }
+                return false;
+            });
+
+            $("a[name='show_login_form_button']").bind('click', function(e) {
+                e.stopPropagation();
+                hideTryAhrefsModal();
+                showSignInModal();
+                $('#emailLogin').focus();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var currentView = 'personal';
+        var planView = 'monthly';
+
+        $(document).ready(function() {
+            $("a[name='subscribe_link']").bind('click', function() {
+                productID = $(this).data("product-" + planView);
+                if (productID == 1 || productID == 16) {
+                    analytics.track('Free Trial Clicked');
+                }
+                window.location = '/user/payment?product=' + productID;
+                return false;
+            });
+        });
+
+        $.fn.switcher = function() {
+            var self = this;
+            self.click(function() {
+                var _self = $(this);
+
+                _self.pricing = [{
+                    name: "lite",
+                    price: 99
+                }, {
+                    name: "standard",
+                    price: 179
+                }, {
+                    name: "advanced",
+                    price: 399
+                }, {
+                    name: "agency",
+                    price: 999
+                }];
+
+                if (_self.hasClass('monthly')) {
+                    planView = 'monthly';
+                    $('section.annual').stop().slideUp();
+                    _self.pricing = _self.pricing;
+
+                    $('.btn-subscribe').not('.annual-monthly').html('Subscribe');
+                    $('.monthly-trial').html('Start free trial');
+                } else {
+                    planView = 'annual';
+                    $('section.annual').stop().slideDown();
+                    _self.pricing = [{
+                        name: "lite",
+                        price: 82
+                    }, {
+                        name: "standard",
+                        price: 149
+                    }, {
+                        name: "advanced",
+                        price: 332
+                    }, {
+                        name: "agency",
+                        price: 832
+                    }];
+                    $('.btn-subscribe').not('.annual-trial').html('Subscribe');
+                    $('.annual-trial').html('Start free trial');
+                }
+
+                $('.pricing__switcher__tab').removeClass('active');
+                _self.addClass('active');
+
+                $('.counter').each(function(index) {
+                    $(this).prop('Counter', $(this).text()).stop().animate({
+                        Counter: _self.pricing[index].price
+                    }, {
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            });
+        };
+
+        //	$('.option-onoff').switcher();
+        $('.pricing__switcher__tab').switcher();
+    </script>
+    <script src="./Plans &amp; Pricing - Ahrefs_files/home.js.download"></script>
+
+
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "licenseKey": "22eb8ca2bc",
+            "applicationID": "28989708",
+            "transactionName": "bwdXNxcHVxADBUFaWVZNdAARD1YNTRZHWlVRDFI=",
+            "queueTime": 0,
+            "applicationTime": 65,
+            "atts": "Q0BUQV8dRB4=",
+            "errorBeacon": "bam.nr-data.net",
+            "agent": ""
+        }
+    </script>
+
 
 </body>
 
