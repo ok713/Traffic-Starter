@@ -278,28 +278,40 @@
                                     <h3>Your Website</h3>
                                 </div>
 
-                                <form action="/dashboard/websites/9/edit" method="post" id="form-website" class="form-horizontal" novalidate>
+                                <form action="edit.html" method="post" id="form-website" class="form-horizontal" novalidate>
 
 
 
 
-                                    <div class="form-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Retention:</label>
-                                            <div class="col-md-4">
-                                                <select class="bs-select form-control">
+                                    <input type='hidden' name='csrfmiddlewaretoken' value='9yDPowRi6BpgdCRzZXugu2CDpsSs2UEE' />
+
+                                    <input type="hidden" name="current_minutes" value="1000">
+
+                                    <div class="form-group ">
+                                        <label class="col-md-3 control-label">URL</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" id="id_url" maxlength="200" name="url" type="url" value="http://aaa.com" />
+                                            <span class="help-block">
+      
+    </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Retention:</label>
+                                        <div class="col-md-4">
+                                            <select class="bs-select form-control">
                                                                             <option>1 Minute</option>
                                                                             <option>2 Minute </option>
                                                                             <option value="3" disabled="disabled">3 Minute (No Privileges)</option>
                                                                             <option value="4" disabled="disabled">4 Minute (No Privileges)</option>
                                                                             <option value="5" disabled="disabled">5 Minute (No Privileges)</option></select>
-                                            </div>
                                         </div>
-                                        <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
 
-                                            <label class="control-label col-md-3">Referrer</label>
-                                            <div class="col-md-4">
-                                                <select id="referrersel" class="bs-select form-control">
+                                        <label class="control-label col-md-3">Referrer</label>
+                                        <div class="col-md-4">
+                                            <select id="referrersel" class="bs-select form-control">
                                                                             <option>Facebook</option>
                                                                             <option>Pinterest</option>
                                                                             <option>Twitter</option>
@@ -311,36 +323,29 @@
                                                                             <option>GOOGLE</option>
                                                                             <option>BING</option>
                                                                             </select>
-                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="default" class="control-label col-md-3">Custom Referrer URL:						</label>
-                                            <div class="col-md-4">
-                                                <input id="default" type="text" class="form-control custromref" placeholder="www.your-referrer.com" disabled>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="default" class="control-label col-md-3">Search Engine Keyword:						</label>
-                                            <div class="col-md-4">
-                                                <input id="search_keyword" type="text" class="form-control" placeholder="your+keyword+here" disabled>
-                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="default" class="control-label col-md-3">Custom Referrer URL:						</label>
+                                        <div class="col-md-4">
+                                            <input id="default" type="text" class="form-control custromref" placeholder="www.your-referrer.com" disabled>
                                         </div>
                                     </div>
 
-
-
-
+                                    <div class="form-group">
+                                        <label for="default" class="control-label col-md-3">Search Engine Keyword:						</label>
+                                        <div class="col-md-4">
+                                            <input id="search_keyword" type="text" class="form-control" placeholder="your+keyword+here" disabled>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <div class="col-md-5 col-md-offset-2">
                                             <input type="submit" value="Apply Changes" class="btn btn-primary" />
-                                            <a href="add_website.html" class="btn btn-default">Back</a>
+                                            <a href="/dashboard/websites/" class="btn btn-default">Back</a>
                                         </div>
                                     </div>
 
-
                                 </form>
-
                             </div>
                             <!-- /.tab-pane -->
                         </div>
