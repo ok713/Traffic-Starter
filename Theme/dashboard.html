@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Dashboard</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="../assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="../assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../static/bower_components/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../static/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="../static/dashboard/css/mvpready-admin.css">
+    <link rel="stylesheet" href="../static/dashboard/css/style.css">
+    <link rel="stylesheet" href="../static/websites/css/websites.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://simpleicon.com/wp-content/uploads/star.png" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class=" ">
+
+    <div id="wrapper">
+
+        <div class="page-wrapper-row">
+            <div class="page-wrapper-top">
+                <!-- BEGIN HEADER -->
+                <div class="page-header">
+                    <!-- BEGIN HEADER TOP -->
+                    <div class="page-header-top">
+                        <div class="container">
+                            <!-- BEGIN LOGO -->
+                            <div class="page-logo">
+                                <a href="index.html">
+                                    <img src="../assets/pages/img/trafficstarter.png" alt="Traffic Starter Logo" class="logo-default"><br>
+
+                                </a>
+                            </div>
+                            <!-- END LOGO -->
+                            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                            <a href="javascript:;" class="menu-toggler"></a>
+                            <!-- END RESPONSIVE MENU TOGGLER -->
+                            <!-- BEGIN TOP NAVIGATION MENU -->
+                            <div class="top-menu">
+                                <ul class="nav navbar-nav pull-right">
+                                    <!-- BEGIN NOTIFICATION DROPDOWN -->
+                                    <!-- DOC: Apply "dropdown-hoverable" class after "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
+                                    <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
+                                    <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                            <i class="icon-bell"></i>
+                                            <span class="badge badge-default"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                        </ul>
+                                    </li>
+                                    <!-- END NOTIFICATION DROPDOWN -->
+                                    <li class="droddown dropdown-separator">
+                                        <span class="separator"></span>
+                                    </li>
+                                    <!-- BEGIN USER LOGIN DROPDOWN -->
+                                    <li class="dropdown dropdown-user dropdown-dark">
+                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                            <img alt="" class="img-circle" src="../assets/layouts/layout3/img/avatar9.jpg">
+                                            <span class="username username-hide-mobile">Marcus</span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-default">
+                                            <li>
+                                                <a href="page_user_profile_1.html">
+                                                    <i class="icon-user"></i> My Profile </a>
+                                            </li>
+                                            <li>
+                                                <a href="app_inbox.html">
+                                                    <i class="icon-envelope-open"></i> My Notifications
+                                                    <span class="badge badge-danger">1</span>
+                                                </a>
+                                            </li>
+                                            <li class="divider"> </li>
+                                            <li>
+                                                <a href="page_user_login_6.html">
+                                                    <i class="icon-key"></i> Log Out </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- END USER LOGIN DROPDOWN -->
+                                </ul>
+                            </div>
+                            <!-- END TOP NAVIGATION MENU -->
+                        </div>
+                    </div>
+                    <!-- END HEADER TOP -->
+                    <!-- BEGIN HEADER MENU -->
+                    <div class="page-header-menu">
+                        <div class="container">
+
+                            <!-- BEGIN MEGA MENU -->
+                            <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
+                            <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
+                            <div class="hor-menu  ">
+                                <ul class="nav navbar-nav">
+                                    <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                        <a href="dashboard.html"> Dashboard
+                                                <span class="arrow"></span>
+                                            </a>
+                                    </li>
+                                    <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown active">
+                                        <a href="javascript:;"> My Websites
+                                                <span class="arrow"></span>
+                                            </a>
+                                    </li>
+                                    <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                        <a href="javascript:;">
+                                            <i class="icon-settings"></i> Settings
+                                            <span class="arrow"></span>
+                                        </a>
+                                        <ul class="dropdown-menu pull-left">
+                                            <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                                <a href="javascript:;">
+                                                    <i class="icon-question"></i> FAQ
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                                <a href="support.html">
+                                                    <i class="icon-support"></i> Support
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                                <a href="account_settings.html">
+                                                    <i class="icon-settings"></i> Account Settings
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                            <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown ">
+                                                <a href="javascript:;">
+                                                    <i class="icon-envelope"></i> Notifications
+                                                    <span class="arrow"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                            </div>
+                            <!-- END MEGA MENU -->
+                        </div>
+                    </div>
+                    <!-- END HEADER MENU -->
+                </div>
+                <!-- END HEADER -->
+            </div>
+        </div>
+        <div class="page-head">
+            <div class="container">
+                <!-- BEGIN PAGE TITLE -->
+                <div class="page-title">
+
+                </div>
+                <!-- END PAGE TITLE -->
+                <!-- BEGIN PAGE TOOLBAR -->
+                <div class="page-toolbar">
+                </div>
+                <!-- END PAGE TOOLBAR -->
+            </div>
+        </div>
+
+        <div class="content">
+
+
+
+            <div class="container">
+                <div class="layout layout-stack-sm layout-main-left">
+                    <div class="col-sm-7 col-md-8 layout-main">
+
+                        <div class="well row">
+                            <div class="col-md-6 col-sm-6 ">
+                                <div class="thumbnail no-image row">
+                                    <div style=" border-bottom-width: 1px; border-bottom-style: solid;  border-bottom-color: lightgray;">
+                                        <h4 style=" color: #5bc0de;">Account Type</h4>
+
+                                    </div>
+                                    <div class="caption">
+                                        <center>
+                                            <h1 style=" color: #5bc0de;">Regular</h1>
+                                        </center>
+                                    </div>
+                                    <input type="submit " value="UPGRADE " class="btn btn-info col-sm-12 col-md-12 " />
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 ">
+
+                                <input type="submit " value="SETTINGS " class="btn btn-info col-sm-12 col-md-12 " />
+                                <br/><br/><br/>
+
+                                <input type="submit " value="BILLING " class="btn btn-info col-sm-12 col-md-12 " />
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="portlet portlet-default ">
+
+                            <!-- /.portlet-header -->
+
+                            <div class="portlet-body ">
+
+                                <div class="row ">
+
+                                    <div class="col-sm-6 col-md-3 ">
+                                        <div class="row-stat ">
+                                            <p class="row-stat-label ">Active</p>
+                                            <h3 class="row-stat-value ">3</h3>
+
+                                        </div>
+                                        <!-- /.row-stat -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                    <div class="col-sm-6 col-md-3 ">
+                                        <div class="row-stat ">
+                                            <p class="row-stat-label ">Paused</p>
+                                            <h3 class="row-stat-value ">0</h3>
+                                        </div>
+                                        <!-- /.row-stat -->
+                                    </div>
+                                    <!-- /.col -->
+
+
+
+                                </div>
+                                <!-- /.row -->
+
+                            </div>
+                            <!-- /.portlet-body -->
+
+                        </div>
+                        <!-- /.portlet -->
+
+                    </div>
+                    <!-- /.layout-main -->
+                    <div class="col-sm-5 col-md-4 layout-sidebar ">
+                        <h2>NEWS</h2>
+
+                        <hr>
+
+                        <div class="well ">
+
+                            <ul class="icons-list text-md ">
+                                <li>
+                                    <i class="icon-li fa fa-comments-o text-primary "></i>
+                                    <strong class="semibold ">Private Chat Room</strong>
+                                    <br> We now have a Chat Room. You should receive an invite shortly.
+                                    <br>
+                                    <a href=" ">Join us</a>
+                                </li>
+                                <li>
+                                    <i class="icon-li fa fa-check-square text-secondary "></i>
+                                    <strong class="semibold ">Viewer 0.7b is now available</strong>
+                                    <br> This is the first release for our private beta testers.
+                                    <br>
+                                    <a href="# ">Download Here</a> | <a href=" ">Report a bug</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.well -->
+
+                    </div>
+                    <!-- /.layout-sidebar -->
+
+                </div>
+                <!-- /.layout -->
+
+            </div>
+            <!-- /.container -->
+
+
+        </div>
+        <!-- .content -->
+
+        <!-- .content -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <footer class="footer ">
+        <div class="container "> 2016 &copy; Traffic Starter
+        </div>
+    </footer>
+
+
+    <div id="confirmModal " class="modal fade ">
+        <div class="modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close " data-dismiss="modal " aria-hidden="true ">×</button>
+                    <h3 class="modal-title ">Title</h3>
+                </div>
+                <div class="modal-body ">
+                    <p>Enter some text here...</p>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-default " data-dismiss="modal ">Cancel</button>
+                    <button type="button " class="btn btn-primary btn-ok ">Yes, I'm sure</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal -->
+
+    <!-- Core JS -->
+    <script src="../static/bower_components/jquery/dist/jquery.js "></script>
+    <script src="../static/bower_components/bootstrap/dist/js/bootstrap.min.js "></script>
+    <script src="../static/bower_components/slimScroll/jquery.slimscroll.min.js "></script>
+    <!-- Plugin JS -->
+    <script src="../static/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js "></script>
+    <script src="../static/bower_components/Flot/excanvas.min.js "></script>
+    <script src="../static/bower_components/Flot/jquery.flot.js "></script>
+    <script src="../static/bower_components/Flot/jquery.flot.pie.js "></script>
+    <script src="../static/bower_components/Flot/jquery.flot.resize.js "></script>
+    <script src="../static/bower_components/Flot/jquery.flot.time.js "></script>
+    <script src="../static/bower_components/flot.tooltip/js/jquery.flot.tooltip.js "></script>
+    <!-- App JS -->
+    <script src="../static/dashboard/js/mvpready-core.js "></script>
+    <script src="../static/dashboard/js/mvpready-helpers.js "></script>
+    <script src="../static/dashboard/js/mvpready-admin.js "></script>
+    <script src="../static/dashboard/js/pricing.js "></script>
+    <script src="../static/notifications/js/notifications.js "></script>
+    <script src="../static/websites/js/websites.js "></script>
+
+
+    <script>
+        $(function() {
+            $('#slotchk1').change(function() {
+                if ($(this).is(':checked')) {
+                    $(this).addClass('checked');
+                    $('#slot1').removeAttr("disabled ");
+                } else {
+                    $(this).removeClass('checked');
+                    $('#slot1').attr("disabled ", "true ");
+                }
+            });
+
+            $('#slotchk2').change(function() {
+                if ($(this).is(':checked')) {
+                    $(this).addClass('checked');
+                    $('#slot2').removeAttr("disabled ");
+                } else {
+                    $(this).removeClass('checked');
+                    $('#slot2').attr("disabled ", "true ");
+                }
+            });
+
+            $('#referrersel').change(function() {
+                if ($(this).val() == "CUSTOM URL ") {
+                    $('.custromref').removeAttr("disabled ");
+                } else if ($(this).val() != "CUSTOM URL ") {
+                    $('.custromref').attr("disabled ", "true ");
+                }
+
+                if ($(this).val() == "GOOGLE " || $(this).val() == "BING ") {
+                    $('#search_keyword').removeAttr("disabled ");
+                } else {
+                    $('#search_keyword').attr("disabled ", "true ");
+                }
+
+
+
+            });
+        })
+    </script>
+    <script>
+        var availableMinutes = parseInt(9000) || 0;
+    </script>
+
+
+    <script>
+        function logout() {
+            var form = document.querySelector('#form-logout');
+            form.submit();
+        }
+
+        function confirmModal(title, msg, callback) {
+            var dialog = $('#confirmModal');
+            dialog
+                .find('.modal-title').text(title).end()
+                .find('.modal-body').html(msg).end()
+                .find('.btn-ok').on('click', function() {
+                    $(this).off('click');
+                    dialog.modal('hide');
+                    if (typeof(callback) === 'function') {
+                        callback();
+                    }
+                }).end()
+                .modal('show');
+        }
+
+        // Auto close alert messages
+        $(".alert:not(.admin-warning) ").delay(5000).slideUp(200, function() {
+            $(this).alert('close');
+        });
+    </script>
+
+</body>
+
+</html>
